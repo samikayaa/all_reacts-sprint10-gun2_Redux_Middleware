@@ -5,11 +5,11 @@ import FavMovie from './components/FavMovie.jsx';
 import { useSelector } from 'react-redux';
 
 function App() {
-  const [sira, setSira] = useState(0) //useSelector(store => store.sira);
-  const favMovies = [];
+  const sira = useSelector(store => store.sira);
+  const favMovies = useSelector(store => store.favMovies);
 
   function sonrakiFilm() {
-    setSira(sira + 1);
+    //setSira(sira + 1);
   }
 
   return (

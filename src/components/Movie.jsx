@@ -1,6 +1,10 @@
-import { movies } from './../data.js';
+import { useSelector } from 'react-redux';
+// import { movies } from './../data.js';
 
 export default function Movie(props) {
+  //const movie = movies[props.sira];
+
+  const movies = useSelector(store => store.movies); //movies bilgisini artık global storumdan almalıyım diye bunu ekeldim.
   const movie = movies[props.sira];
 
   return (
