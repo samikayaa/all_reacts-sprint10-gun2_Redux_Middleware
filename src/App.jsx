@@ -63,12 +63,12 @@ function App() {
                   Önceki
                 </button>}
 
-                <button
+                {sira < movies.length - 1 && <button
                   onClick={sonrakiFilm}
                   className="select-none px-4 py-2 border border-blue-700 text-blue-700 hover:border-blue-500 hover:text-blue-500"
                 >
                   Sıradaki
-                </button>
+                </button>}
 
                 <button
                   onClick={favorilereEkle}
