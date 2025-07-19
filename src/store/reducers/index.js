@@ -1,5 +1,5 @@
 import { movies } from "../../data.js"
-import { NEXT_MOVIE, PREV_MOVIE } from "../actions"
+import { NEXT_MOVIE, PREV_MOVIE, ADD_FAVS } from "../actions"
 
 /* {
     id: 8,
@@ -37,6 +37,14 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 sira: state.sira - 1,
+            }
+
+        case ADD_MOVIE:
+            return {
+                ...state,
+                favMovies: [...state.favMovies, state.movies[state.sira]],
+                movies: state.movies.filter(mov => mov.id !== state.movies[state.sira].id),
+                sira: state.sira === 0 ? 0 : state.sira - 1
             }
 
         default:

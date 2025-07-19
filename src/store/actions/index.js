@@ -1,5 +1,6 @@
 export const NEXT_MOVIE = 'NEXT_MOVIE';
 export const PREV_MOVIE = 'PREV_MOVIE';
+export const ADD_FAVS = 'ADD_FAVS';
 
 export const nextMovie = () => {
     return { type: NEXT_MOVIE };
@@ -7,4 +8,8 @@ export const nextMovie = () => {
 
 export const prevMovie = () => {
     return { type: PREV_MOVIE };
+};
+
+export const addFavs = () => {
+    return { type: ADD_FAVS };
 };
