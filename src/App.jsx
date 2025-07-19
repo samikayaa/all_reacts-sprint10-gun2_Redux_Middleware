@@ -3,6 +3,7 @@ import { Switch, Route, NavLink } from 'react-router-dom';
 import Movie from './components/Movie.jsx';
 import FavMovie from './components/FavMovie.jsx';
 import { useSelector } from 'react-redux';
+import { nextMovie, prevMovie } from './store/actions/index.js';
 
 function App() {
   const sira = useSelector(store => store.sira);

@@ -1,4 +1,5 @@
 import { movies } from "../../data.js"
+import { NEXT_MOVIE, PREV_MOVIE } from "../actions"
 
 /* {
     id: 8,
@@ -25,6 +26,19 @@ const initialState = {
 //PREVIOUS_MOVIE
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
+
+        case NEXT_MOVIE:
+            return {
+                ...state,
+                sira: state.sira + 1,
+            }
+
+        case PREV_MOVIE:
+            return {
+                ...state,
+                sira: state.sira - 1,
+            }
+
         default:
             return state
     }
