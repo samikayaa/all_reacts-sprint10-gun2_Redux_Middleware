@@ -4,9 +4,12 @@ import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
+import { Provider } from 'react-redux';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Provider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 );
