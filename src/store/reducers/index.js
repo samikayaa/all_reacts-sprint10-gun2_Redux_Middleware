@@ -39,7 +39,7 @@ export const reducer = (state = initialState, action) => {
                 sira: state.sira - 1,
             }
 
-        case ADD_MOVIE:
+        case ADD_FAVS:
             return {
                 ...state,
                 favMovies: [...state.favMovies, state.movies[state.sira]],
