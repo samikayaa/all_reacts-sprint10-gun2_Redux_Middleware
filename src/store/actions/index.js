@@ -16,5 +16,5 @@ export const addFavs = () => {
 };
 
 export const removeMovie = () => {
-    return { type: REMOVE_MOVIE };
+    return { type: REMOVE_MOVIE, payload: id };
 };

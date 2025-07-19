@@ -48,9 +48,13 @@ export const reducer = (state = initialState, action) => {
             }
 
         case REMOVE_MOVIE:
+
+            const movieToRemove = stete.favMovies.find(movie => movie.id === action.payload)
+
             return {
                 ...state,
-                favMovies: [...state.favMovies.filter(mov => mov !== state.favMovies)]
+                movie: [...state.movie, movieToRemove],
+                favMovies: [...state.favMovies.filter(mov => mov.id !== action.payload)]
             }
         default:
             return state
